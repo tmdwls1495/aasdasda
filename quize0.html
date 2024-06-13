@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3a3eeac74a.js" crossorigin="anonymous"></script>
+    <title>A_</title>
+    
+    <style>
+        #contentTitle {
+            position: absolute; 
+            top: 0; 
+            right: 0;
+            margin-top: 40px;
+            margin-right: 100px; 
+            text-align: right; 
+        }
+      
+        #content{
+            font-size: 30px;
+            max-width: 1000px;
+            margin: 140px auto;
+
+        }
+        #add{
+            font-size: 20px;
+            background-color: rgb(255, 255, 175); 
+            display: inline; 
+            padding: 4px; 
+            text-shadow: 0 0 5px rgba(255,255,0,0.5); 
+        }
+        #contentQ{
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+    
+        #answerPart1 {
+            display: flex; 
+            justify-content: space-between; 
+        }
+        #question1{
+            margin-bottom: 30px;
+        }
+        #answerPart1 div {
+            text-align: center; 
+        }
+        #answerPart1 .answerWrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #answerPart1 img {
+            width: 200px; 
+            height: 200px;
+        }
+        .answerNumber {
+            align-self: flex-start; 
+            margin-bottom: 10px; 
+            cursor: pointer;
+            transition: transform 0.1s ease; 
+        }
+        .answerNumber:active {
+            transform: scale(0.95); 
+        }
+
+        .selected { 
+            color: rgb(255, 148, 9); 
+        }
+          
+              #progressBarContainer {
+            width: 100%;
+            background-color: #f3f3f3;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        #progressBar {
+            width: 0;
+            height: 20px;
+            background-color: #4caf50;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+            border-radius: 5px;
+        }
+        #answerPart2 {
+            display: flex; 
+            justify-content: space-between; 
+        }
+        #question2{
+
+            margin-bottom: 30px;
+        }
+        #answerPart2 div {
+            text-align: center; 
+        }
+        #answerPart2 .answerWrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #answerPart2 img {
+            width: 200px; 
+            height: 200px;
+        }
+        .answerNumber {
+            align-self: flex-start; 
+            margin-bottom: 10px; 
+            cursor: pointer;
+            transition: transform 0.1s ease; 
+        }
+        .answerNumber:active {
+            transform: scale(0.95); 
+        }
+        .answerNumber2 {
+            align-self: flex-start; 
+            margin-bottom: 10px; 
+            cursor: pointer;
+            transition: transform 0.1s ease; 
+        }
+        .answerNumber2:active {
+            transform: scale(0.95); 
+        }
+
+        .selected { 
+            color: rgb(255, 148, 9); 
+        }
+        #submit {
+            padding: 15px 20px;
+            font-size: 30px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 10px; 
+            cursor: pointer;
+            transition: background-color 0.3s ease; 
+            margin-left: 830px;
+    
+        }
+
+        #submit:hover {
+            background-color: #45a049; 
+        }
+    </style>
+</head>
+<body>
+    <div id="A_2_4">
+        <div id="contentTitle">A단계<br>2권 - 1회</div>
+        <div id="content">
+            <i class="fa-solid fa-seedling" style="color: #3bc002;"></i><div id="add">상황에 맞는 사진 찾기</div>
+            <div id="contentQ">
+                다음의 지문을 읽고 문제를 풀어보세요(1~2)
+            </div>
+            <!-- 진행 상황 표시 바 -->
+            <div id="progressBarContainer">
+                <div id="progressBar">0%</div>
+            </div>
+    
+            <div id="question1">
+                1.민지는 추석을 맞아 오랜만에 시골에 내려갔습니다. <br>
+                고향은 시간이 흘러도 변함없이 여전했습니다. 민지가 볼 수 있는 풍경으로 알맞지 않은 것은 무엇인가요?
+            </div>
+            <div id="answerPart1">
+                <div class="answerWrapper">
+                    <div class="answerNumber">&#9312;</div>
+                    <img src="assets/논.jpg" alt="논">
+                </div>
+                <div class="answerWrapper">
+                    <div class="answerNumber">&#9313;</div>
+                    <img src="assets/소.jpg" alt="소">
+                </div>
+                <div class="answerWrapper">
+                    <div class="answerNumber" data-answer="3">&#9314;</div>
+                    <img src="assets/빌딩.jpg" alt="빌딩">
+                </div>
+                <div class="answerWrapper">
+                    <div class="answerNumber">&#9315;</div>
+                    <img src="assets/산.jpg" alt="산">
+                </div>
+            </div> <br>
+    
+            <div id="question2">
+                2.나래는 살을 뺴기 위해 수영장을 다니기로 했습니다. <br>
+                 나래가 챙겨야 할 준비물로 알맞지 않은 것은 무엇인가요?
+            </div>
+            <div id="answerPart2" class="hidden">
+                <div class="answerWrapper">
+                    <div class="answerNumber2">&#9312;</div>
+                    <img src="assets/수모.png" alt="수모">
+                </div>
+                <div class="answerWrapper">
+                    <div class="answerNumber2" data-answer="2">&#9313;</div>
+                    <img src="assets/등산스틱.png"  alt="등산스틱">
+                </div>
+                <div class="answerWrapper">
+                    <div class="answerNumber2">&#9314;</div>
+                    <img src="assets/수경.jpg" alt="수경">
+                </div>
+                <div class="answerWrapper">
+                    <div class="answerNumber2">&#9315;</div>
+                    <img src="assets/수영복.jpg" alt="수영복">
+                </div>
+            </div>
+    
+            <div id="result"></div>
+            <button id="submit">제출하기</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const answerNumbers1 = document.querySelectorAll('#answerPart1 .answerNumber');
+            const answerNumbers2 = document.querySelectorAll('#answerPart2 .answerNumber2');
+            const submitButton = document.getElementById('submit');
+            const resultDiv = document.getElementById('result');
+            const progressBar = document.getElementById('progressBar');
+            let currentProgress = 0;
+            const totalQuestions = 2; // 전체 문제 수 설정
+    
+            answerNumbers1.forEach(function (number) {
+                number.addEventListener('click', function () {
+                    answerNumbers1.forEach(function (num) {
+                        num.classList.remove('selected');
+                    });
+                    number.classList.add('selected'); 
+                    updateProgress(); 
+                });
+            });
+    
+            answerNumbers2.forEach(function (number) {
+                number.addEventListener('click', function () {
+                    answerNumbers2.forEach(function (num) {
+                        num.classList.remove('selected');
+                    });
+                    number.classList.add('selected'); 
+                    updateProgress();
+                });
+            });
+    
+            submitButton.addEventListener('click', function () {
+    const selectedAnswer1 = document.querySelector('#answerPart1 .selected');
+    const selectedAnswer2 = document.querySelector('#answerPart2 .selected');
+
+    if (!selectedAnswer1 || !selectedAnswer2) {
+        window.alert('모든 문제에 응답해주세요.');
+    } else {
+        const answer1 = selectedAnswer1.dataset.answer;
+        const answer2 = selectedAnswer2.dataset.answer;
+
+        if (answer1 === '3' && answer2 === '2') {
+            window.alert('축하합니다!');
+        } else {
+            window.alert('아쉽네요.');
+        }
+    }
+});
+            function updateProgress() {
+                const selectedAnswer1 = document.querySelector('#answerPart1 .selected');
+                const selectedAnswer2 = document.querySelector('#answerPart2 .selected');
+                currentProgress = (selectedAnswer1 && selectedAnswer2) ? 100 : 50;
+                progressBar.style.width = currentProgress + '%';
+                progressBar.textContent = Math.round(currentProgress) + '%';
+            }
+        });
+    </script>
+</body>
+</html>
